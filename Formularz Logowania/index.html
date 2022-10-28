@@ -16,10 +16,21 @@
             <div class="content">
                 <div class="form">
                     <div class="line">
-                        <input type="text" class="ok" id="email" placeholder="Email "></input>
+                        <input 
+                            type="text" 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            class="ok"
+                            id="email"
+                            placeholder="Email " 
+                        </input>
                     </div>
                     <div class="line">
-                        <input type="text" class="ok" id="password" placeholder="Password"></input>
+                        <input 
+                            type="password" 
+                            class="ok" 
+                            id="password" 
+                            placeholder="Password">
+                        </input>
                     </div>
 
                     <div class="forg">

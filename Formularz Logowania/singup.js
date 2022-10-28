@@ -4,7 +4,8 @@ document.querySelector("#run").addEventListener("click",function(){
     
     let haslo = document.querySelector("#password");
     let email = document.querySelector("#email");
-    console.log(Say_info( haslo, email));
+    let identyfikator = document.querySelector("#identyfikator")
+    console.log(Say_info( haslo, email, identyfikator));
     //ClearForm();
 });
 
@@ -13,11 +14,12 @@ function ClearForm(){
     document.querySelector("#email").value = "";
 }
 
-function Say_info(haslo, email){
+function Say_info(haslo, email, identyfikator){
     const passwordOK = ValidateInput(haslo);
     const emailOK = ValidateInput(email);
+    const identyfikatorOK = ValidateInput(identyfikator);
     if(!passwordOK|| !emailOK) return "BRAK LUB NIEPELNE DANE";
-    return `Email :  ${haslo.value} Password : ${email.value}`
+    return `Email :  ${haslo.value} Password : ${email.value} Identyfikator : ${identyfikator.value}`
 }
 
 function ValidateInput(element){

@@ -15,9 +15,10 @@ function ClearForm(){
 
 function Say_info(haslo, email){
     const passwordOK = ValidateInput(haslo);
-    const emailOK = ValidateInput(email);
+    const emailOK = ValidateEmail(email);
     if(!passwordOK|| !emailOK) return "BRAK LUB NIEPELNE DANE";
-    return `Email :  ${haslo.value} Password : ${email.value}`
+    document.location.href = './main.html';
+    return `Password :  ${haslo.value} Email : ${email.value}`
 }
 
 function ValidateInput(element){
@@ -29,3 +30,16 @@ function ValidateInput(element){
     return true;
 }
 
+
+function ValidateEmail(input) {
+
+var validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  
+if (input.value.match(validRegex)) {
+    input.className = "ok";
+return true;
+    } else {
+        input.className = "error";
+        return false;
+    }
+}

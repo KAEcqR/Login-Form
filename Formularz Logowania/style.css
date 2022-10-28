@@ -2,7 +2,8 @@
     --main: #47c4a1;
     --darker: rgb(11, 133, 121);
     --light: #e0fbfc;
-    --accent: rgb(255, 112, 112);
+    --accent: #ff7070;
+    --accent_dark: rgb(255, 0, 0);
     --dark: #293241; 
 }
 
@@ -145,11 +146,20 @@ input{
 
 .error{
     background: white;
-    border: solid 2px rgb(255, 112, 112);
+    border: solid 2px var(--accent);
     border-radius: 3px;
     cursor: pointer;
     width: 100%;
     margin-top: 5px;
+    padding-left:10px ;
+    transition: border 0.5s;
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    25% {transform: translateX(4px)}
+    50% {transform: translateX(-4px)}
+    75% {transform: translateX(4px)}
 }
 
 .ok{
@@ -163,6 +173,11 @@ input{
     padding-left:10px ;
 }
 
+.error:hover {
+    border: solid 2px var(--accent_dark)
+}
+
 .ok:hover {
     border: solid 2px var(--dark);
 }
+
