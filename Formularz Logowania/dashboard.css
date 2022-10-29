@@ -2,7 +2,7 @@
     --main: #47c4a1;
     --darker: rgb(11, 133, 121);
     --light: #e0fbfc;
-    --accent: rgb(255, 112, 112);
+    --accent: #ff7070;
     --accent_dark: rgb(255, 0, 0);
     --dark: #293241; 
 }
@@ -20,8 +20,8 @@ body{
 .container {
     width: 15vw;
     max-height: 90%;
-    min-height: 30%;
-    min-width: 30vh;
+    min-height: 70%;
+    min-width: 70%;
     background: white;
     border-radius: 5px;
     position: relative;
@@ -43,17 +43,18 @@ h2 {
     font-size: 15px;
     font-family: sans-serif;
     font-weight: 500;
-    color: var(--darker);
-    margin-top: 5px;
-    margin-bottom: 15px;
+    color: var(--light);
+    margin-left: 5px;
 }
 
-.paragraph {
+.forg{
     font-size: 15px;
     font-family: sans-serif;
     font-weight: 500;
     color: var(--darker);
-    margin: 15px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .not {
@@ -81,8 +82,8 @@ h2 {
 a {
     font-size: 15px;
     font-family: sans-serif;
-    font-weight: 500;
-    color: var(--darker);
+    font-weight: 600;
+    color: var(--white);
     margin-left: 5px;
     text-decoration: none;
     transition: color 0.5s;
@@ -109,7 +110,6 @@ input{
     text-shadow:0px 8px 24px 0 rgba(0, 0, 0, 0.2) ;
 }
 
-
 input[type=button]{
     width: 100%;
     height: 30px;
@@ -129,12 +129,9 @@ input[type=button]:hover{
     background:var(--dark);
 }
 
-
 input{
     width: 160px;
 }
-
-
 
 .content{
     display: flex;
@@ -152,14 +149,8 @@ input{
     margin-top: 5px;
     padding-left:10px ;
     transition: border 0.5s;
-    animation: shake 0.3s;
 }
 
-@keyframes shake {
-    25% {transform: translateX(4px)}
-    50% {transform: translateX(-4px)}
-    75% {transform: translateX(4px)}
-}
 .ok{
     margin-top: 5px;
     background: white;
@@ -190,7 +181,7 @@ input{
     align-items: center;
     justify-content: center;
     background: var(--main);
-    transition: opacity 0.5s, visibility 0.5s;
+    transition: opacity 1s, visibility 1s;
   }
   
   .loader--hidden {
@@ -206,7 +197,7 @@ input{
     border: 15px solid #dddddd;
     border-top-color: #009578;
     border-radius: 50%;
-    animation: loading 0.5s ease infinite;
+    animation: loading 1s ease infinite;
   }
   
   @keyframes loading {

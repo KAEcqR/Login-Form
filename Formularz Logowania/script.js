@@ -1,4 +1,3 @@
-
 document.querySelector("#run").addEventListener("click",function(){
     
     
@@ -17,7 +16,7 @@ function Say_info(haslo, email){
     const passwordOK = ValidateInput(haslo);
     const emailOK = ValidateEmail(email);
     if(!passwordOK|| !emailOK) return "BRAK LUB NIEPELNE DANE";
-    document.location.href = './main.html';
+    document.location.href = './dashboard.html';
     return `Password :  ${haslo.value} Email : ${email.value}`
 }
 
@@ -43,3 +42,11 @@ return true;
         return false;
     }
 }
+
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+  
+    loader.classList.add("loader--hidden");
+  
+  });
+  
