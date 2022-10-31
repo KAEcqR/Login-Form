@@ -11,7 +11,7 @@ function ClearForm(){
 }
 
 function Say_info(email){
-    const emailOK = ValidateInput(email);
+    const emailOK = ValidateEmail(email);
     if(!emailOK) return "BRAK LUB NIEPELNE DANE";
     return `Email :  ${email.value}`
 }
@@ -24,6 +24,19 @@ function ValidateInput(element){
     element.className = "ok";
     return true;
 }
+
+function ValidateEmail(input) {
+
+    var validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      
+    if (input.value.match(validRegex)) {
+        input.className = "ok";
+    return true;
+        } else {
+            input.className = "error";
+            return false;
+        }
+    }
 
 window.addEventListener("load", () => {
     const loader = document.querySelector(".loader");
